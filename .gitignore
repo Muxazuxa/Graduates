@@ -1,5 +1,5 @@
 migrations
 env
 *.pyc
-*.env.*
+*.env.save
 .idea
