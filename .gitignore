@@ -1,4 +1,5 @@
 migrations
+.env
 env
 *.pyc
 *.env
