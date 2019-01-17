@@ -1,0 +1,5 @@
+migrations
+env
+*.pyc
+*.env
+.idea
