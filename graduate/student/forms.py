@@ -3,20 +3,18 @@ from .models import Student, Cafedra
 
 
 class StudentForm(forms.ModelForm):
+    graduate_date = forms.DateTimeField(input_formats=["%d.%m.%Y"], widget=forms.DateTimeInput(), label='Дата окончания')
+
     class Meta:
         model = Student
         fields = (
             'fio',
-            'birth_date',
-            'enter_date',
             'graduate_date',
             'faculty',
             'cafedra',
             'country',
-            'city',
-            'address',
             'job',
-            'dolj',
+            'jcategory',
             'telephone',
             'email')
 

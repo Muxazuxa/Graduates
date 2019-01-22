@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Список Всех Выпускников</title>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container" >
+    <br>
+    <h3>Список всех Выпускников </h3>
+    <br>
+    {% for student in students %}
+    <table >
+            <tr>
+            <td>
+                <ul>
+                    <li> ФИО: </li>
+                    <li> Дата окончания:</li>
+                    <li> Факультет:</li>
+                    <li> Кафедра:</li>
+                    <li> Страна проживания:</li>
+                    <li> Место работы:</li>
+                    <li> Сфера Деятельности:</li>
+                    <li> Телефон:</li>
+                    <li> Email:</li>
+                </ul>
+            </td>
+                <td>
+                <ul style="list-style-type:none; color:green;">
+                    <li> {{ student.fio }} </li>
+                    <li> {{ student.graduate_date }}</li>
+                    <li> {{ student.faculty }}</li>
+                    <li> {{ student.cafedra }}</li>
+                    <li> {{ student.country }}</li>
+                    <li> {{ student.job }}</li>
+                    <li> {{ student.jcategory }}</li>
+                    <li> {{ student.telephone }}</li>
+                    <li> {{ student.email }}</li>
+                </ul>
+            </td>
+            </tr>
+    </table>
+    <br>
+    {% endfor %}
+</div>
+
+{% endblock %}
