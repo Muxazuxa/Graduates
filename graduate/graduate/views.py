@@ -1,5 +1,5 @@
 from django.shortcuts import redirect
 
 
-def page_redirect(request):
-    return redirect('/reg')
+def login_redirect(request):
+    return redirect('/student/login')

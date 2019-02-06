@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Faculty(models.Model):
-    name = models.CharField(max_length=30, null=False)
+    name = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
         return self.name
@@ -16,7 +16,7 @@ class Faculty(models.Model):
 
 class Cafedra(models.Model):
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
@@ -53,6 +53,6 @@ class Student(models.Model):
         return self.fio
 
     class Meta:
-        verbose_name='Студент'
-        verbose_name_plural='Студенты'
+        verbose_name='Выпускники'
+        verbose_name_plural='Выпускники'
 

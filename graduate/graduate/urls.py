@@ -18,8 +18,11 @@ from django.urls import path
 from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import url, include
+from .import views
 
 urlpatterns = [
+    url(r'^$', views.login_redirect, name='login_redirect'),
     path('admin/', admin.site.urls),
-    path('', include('student.urls', namespace='student'))
+    path('student/', include('student.urls', namespace='student'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
