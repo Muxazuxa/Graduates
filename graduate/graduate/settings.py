@@ -122,6 +122,7 @@ USE_TZ = True
 
 LOGIN_REDIRECT_URL = '/student/add'
 
+LOGIN_URL = '/student/login'
 
 
 # Static files (CSS, JavaScript, Images)
